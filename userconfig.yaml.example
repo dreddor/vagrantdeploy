@@ -1,0 +1,23 @@
+---
+# OS Username
+user: username
+# Ansible envoronment setup repo
+envsetup_repo: https://github.com/dreddor/envsetup
+# Additional private repository
+restricted_repo: git@github.com:dreddor/restricted
+
+# Get the private/restricted repository?
+use_restricted: false
+
+# Command to run after bootstrap
+init_command: "sudo -H -u ${INIT_COMMAND_USER} USERESTRICTED=${USERESTRICTED} bash -c 'make -C ${HOME}/deployments/envsetup ubuntu_host'"
+
+# Git Credentials
+git_user: Git User
+git_email: example@example.com
+
+# We are not running in WSL
+is_wsl: no
+
+# We are running in Vagrant
+is_vagrant: yes

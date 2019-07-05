@@ -19,6 +19,11 @@ Vagrant.configure(2) do |config|
         h.maxmemory = 6144
     end
 
+    config.vm.provider "virtualbox" do |vb|
+        vb.customize ["modifyvm", :id, "--memory", 3096]
+        vb.customize ["modifyvm", :id, "--cpus", 4]
+    end
+
     config.ssh.forward_x11 = true
     config.ssh.forward_agent = true
 

@@ -10,7 +10,7 @@ restricted_repo: git@github.com:dreddor/restricted
 use_restricted: false
 
 # Command to run after bootstrap
-init_command: "sudo -H -u ${INIT_COMMAND_USER} USERESTRICTED=${USERESTRICTED} bash -c 'make -C ${HOME}/deployments/envsetup ubuntu_host'"
+init_command: "sudo -H -u ${INIT_COMMAND_USER} bash -c 'ansible-playbook ${HOME}/deployments/envsetup/main.yaml'"
 
 # Git Credentials
 git_user: Git User

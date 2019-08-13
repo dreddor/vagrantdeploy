@@ -15,13 +15,13 @@ Vagrant.configure(2) do |config|
     end
 
     config.vm.provider "hyperv" do |h|
-        h.cpus = 4
-        h.maxmemory = 6144
+        h.cpus = userconfig['cpus']
+        h.maxmemory = userconfig['memory']
     end
 
     config.vm.provider "virtualbox" do |vb|
-        vb.customize ["modifyvm", :id, "--memory", 3096]
-        vb.customize ["modifyvm", :id, "--cpus", 4]
+        vb.customize ["modifyvm", :id, "--memory", userconfig['memory']]
+        vb.customize ["modifyvm", :id, "--cpus", userconfig['cpus']]
     end
 
     config.ssh.forward_x11 = true

@@ -16,8 +16,11 @@ init_command: "sudo -H -u ${INIT_COMMAND_USER} bash -c 'ansible-playbook ${HOME}
 git_user: Git User
 git_email: example@example.com
 
-# We are not running in WSL
-is_wsl: no
-
 # We are running in Vagrant
 is_vagrant: yes
+
+# Number of cpus for the vagrant box
+cpus: 4
+
+# Amount of memory for the vagrant box
+memory: 4096

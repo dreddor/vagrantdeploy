@@ -24,3 +24,6 @@ cpus: 4
 
 # Amount of memory for the vagrant box
 memory: 4096
+
+# Build gpdb when building VM?
+build_gpdb: False

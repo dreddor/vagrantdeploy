@@ -123,10 +123,10 @@ cat <<EOF > /tmp/hosts
 [all:vars]
 userconfig=/vagrant/userconfig.yaml
 
-[localhost]
-127.0.0.1
+[vagrant_workstation]
+localhost
 
-[localhost:vars]
+[vagrant_workstation:vars]
 ansible_connection=local
 ansible_python_interpreter="{{ansible_playbook_python}}"
 EOF
